@@ -1,0 +1,24 @@
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\Administrador\Downloads\TP1_sintesis\Fuente_Controlada_Tension.asc
+Start Time: Tue Feb 11 02:31:37 2025
+solver = Normal
+Maximum thread count: 2
+
+
+
+Direct Newton iteration for .op point succeeded.
+.step rval=1000
+
+
+
+.step rval=2000
+
+
+
+.step rval=5000
+tnom = 27
+temp = 27
+method = modified trap
+.step rval=10000
+Total elapsed time: 0.810 seconds.
+
