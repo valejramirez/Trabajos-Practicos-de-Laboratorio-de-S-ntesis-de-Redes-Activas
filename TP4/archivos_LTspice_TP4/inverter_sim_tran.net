@@ -1,0 +1,20 @@
+* C:\Users\franc\OneDrive\Escritorio\LTSpice_50n\inverter_sim_tran.asc
+Vin in 0 PULSE(0 1 2n 10p 0 1)
+XX1 in out VDD 0 inverter
+C1 out 0 10p
+
+* block symbol definitions
+.subckt inverter in out VDD DGND
+M1 out in DGND DGND N_50n l=50n w=0.5u
+M2 VDD in out VDD P_50n l=50n w=1u
+.include cmosedu_models.txt
+.ends inverter
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\franc\AppData\Local\LTspice\lib\cmp\standard.mos
+.include cmosedu_models.txt
+VDD VDD 0 DC 1
+.tran 0 50n 0 10p
+.backanno
+.end
